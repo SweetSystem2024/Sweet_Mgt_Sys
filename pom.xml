@@ -51,7 +51,10 @@
   
   
   
-  
+  <properties>
+  <sonar.organization>sweetsystem2024bisan</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+</properties>
   
   
   
