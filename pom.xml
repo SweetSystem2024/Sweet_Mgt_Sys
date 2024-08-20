@@ -4,7 +4,10 @@
   <artifactId>Bisan_System_Sweet</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-  <build>
+  
+  
+  
+<build>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -15,12 +18,16 @@
         </configuration>
       </plugin>
 
-      <plugin>
+
+<plugin>
         <groupId>org.sonarsource.scanner.maven</groupId>
         <artifactId>sonar-maven-plugin</artifactId>
         <version>3.9.1.2184</version>
       </plugin>
+    
 
+
+	    
       <!-- JaCoCo Plugin Configuration -->
       <plugin>
         <groupId>org.jacoco</groupId>
@@ -35,57 +42,84 @@
           </execution>
           <execution>
             <id>report</id>
-            <phase>test</phase>
+            <phase>prepare-package</phase>
             <goals>
               <goal>report</goal>
             </goals>
-            <configuration>
-              <reports>
-                <report>xml</report>
-              </reports>
-              <outputDirectory>${project.build.directory}/jacoco</outputDirectory>
-            </configuration>
           </execution>
         </executions>
       </plugin>
     </plugins>
   </build>
 
-  <properties>
-    <sonar.organization>sweetsystem2024bisan</sonar.organization>
-    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
-    <sonar.projectKey>HandemadeSweet_Bisan_System_Sweet</sonar.projectKey>
-  </properties>
 
+
+	
+
+<properties>
+  <sonar.organization>sweetsystem2024bisan</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+</properties>
+  
   <dependencies>
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-picocontainer</artifactId>
-      <version>7.18.0</version>
-    </dependency>
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-java</artifactId>
-      <version>7.18.0</version>
-    </dependency>
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-core</artifactId>
-      <version>7.18.0</version>
-    </dependency>
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-junit</artifactId>
-      <version>7.18.0</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.2</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-</project>
+	  
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-picocontainer</artifactId>
+    <version>7.18.0</version>
+</dependency>
 
+	  
+	  
+	  
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>7.18.0</version>
+</dependency>
+
+	  
+	  
+	  
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-core</artifactId>
+    <version>7.18.0</version>
+</dependency>
+
+	  
+	  
+	  
+	  
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit</artifactId>
+    <version>7.18.0</version>
+    <scope>test</scope>
+</dependency>
+
+	  
+	  
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
+    <scope>test</scope>
+</dependency>
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+  </dependencies>
+  
+  
+  
+ 
+  
+  
+  
+</project>
