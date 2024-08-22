@@ -7,7 +7,7 @@
   <properties>
     <maven.compiler.source>22</maven.compiler.source>
     <maven.compiler.target>22</maven.compiler.target>
-    <sonar.projectKey>SweetSystem2024Bisan_Sweet_Mgt_Sys</sonar.projectKey>
+    <sonar.projectKey>your_project_key</sonar.projectKey>
     <sonar.organization>sweetsystem2024bisan</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <sonar.login>${env.SONAR_TOKEN}</sonar.login> <!-- Use environment variable for security -->
@@ -80,12 +80,11 @@
         <version>3.0.0-M7</version>
         <configuration>
           <reportsDirectory>target/surefire-reports</reportsDirectory>
-          <includes>
-            <include>**/AcceptanceTest.java</include>
-          </includes>
+          <test>**/AcceptanceTest.java</test>
         </configuration>
       </plugin>
     </plugins>
   </build>
 </project>
+
 
